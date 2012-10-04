@@ -39,7 +39,7 @@ module AddMagicComment
         end
 
         # set current encoding
-        lines.insert(0,comment_style.sub('{text}', prefix))
+        lines.unshift comment_style.sub('{text}', prefix)
         count += 1
 
         file.pos = 0
