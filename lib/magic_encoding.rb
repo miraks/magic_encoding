@@ -33,6 +33,8 @@ module AddMagicComment
 
         lines = file.readlines
 
+        next if lines.empty?
+
         # remove current encoding comment(s)
         while lines[0].match(/^-?# ?(-\*-)? ?(en)?coding/)
           lines.shift
